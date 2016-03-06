@@ -1,17 +1,17 @@
-/* this is a css comment*/
-
 body {
-	/* using hexadecimal colour system*/
-	background-color: #4e977a;
-	/* two .. means go up one folder into images and look for file. one dot means same folder*/
-	background-image: url(..//images/forest-leaves.jpg);
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: cover;
-	background-attachment: fixed;
-	/* use list to font preferences depending on browser. google for web safe fonts*/
-	font-family: helvetica, arial;
-	min-height: 1000px;
+  margin: 0 auto;
+}
+
+.jacket {
+  background-color: #222;
+  background-image: url(..//images/runnerbeans.jpg);
+  background-size: 1200px auto;
+  color: white;
+  height: 700px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  width: 600px;
 }
 
 @media screen and (orientation: portrait) {
@@ -20,113 +20,52 @@ body {
 	}
 }
 
-/* styling header1...*/
-h1 {
-	text-align: center;
-	font-size: 40px;
-	border-bottom: 0.5px solid grey;
-	padding-bottom: 20px;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	/* font from google.cpm/fonts step 2 */
-	font-family: 'Cantarell', arial;
-	/* horizontal vertical width colour */
-	text-shadow: 0 0 20px grey;
-
+.jacket__author, .jacket__title {
+  font-size: 40px;
+}
+.jacket__author {
+  font-family: Arial, 'sans-serif';
+  position: relative;
+  top: 118px;
+}
+.jacket__band {
+  background-color: rgba(255,255,255,0.9);
+  background-image: url("..//images/bee.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px;
+  height: 80px;
+  position: relative;
+  top: 237px;
+	cursor: pointer;
 }
 
-/* for responsive text, use the span function*/
-@media screen and (max-width: 767px){
-	h1 span {
-		display: block;
-	}
-}
-
-/* styling header2...*/
-h2 {
-	font-family: arial;
-	margin-bottom: 40px;
-	font-weight: normal;
-	letter-spacing: 5px;
-	text-transform: uppercase;
-	text-align: center;
-	/* to available slide toggle issues*/
-	margin-bottom: 0;
-}
-
-h2 {
-	cursor:pointer;
-}
-
-/* styling just first image as defined in html...*/
-.profile img {	
-	/* all margins can vary ...*/
-	border-radius: 50%;
-	/* better to put width of images in css or better still change the size of the image before uploading*/
-	width: 400px;
-	display: block;
-	margin: 0 auto;
-}
-
-.profile figcaption {
-	text-align:center;
-	border: none;
-}
-
-h3 {
-	text-transform: uppercase;
-} 
-
-/* styling ul and ol at the same time. separate by ,*/
-ul,
-ol {
-	list-style: square;
-	padding-left: 10;
-	line-height: 1.5;
-}
-
-a{
-	color: #cc3399;
-	font-weight: bold;
+a {
+	color: black;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
-/* changing the colour of various states of hyperlink*/
-a:hover,
-a:focus {
-	color: #112433;
-	text-decoration: underline;
+.jacket__band::before, .jacket__band::after {
+  color: #222;
+  font-family: Arial, 'sans-serif';
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  position: relative;
+  text-transform: uppercase;
+  top: 33%;
 }
-
-a:visited {
-	color: #778899;
+.jacket__band::before {
+  content: "Honor";
+  left: -7em;
 }
-
-
-/* styling the div class section from html*/
-.main {
-	max-width: 800px;
-	/* rgba and additional 0.9 on the end is for transparncy of the div*/
-	background-color: rgba(255,255,255,0.9);
-	padding: 40px;
-	margin: 0 auto;
-	border-radius: 1% 1%;
-	/* sshadow is horizontal position vertical postion blur size colour*/
-	box-shadow: 0 0 60px 50px rgba(255,255,255,0.9);
+.jacket__band::after {
+  content: "Cowen";
+  left: 7em;
 }
-
-p {
-	line-height: 30px;
-	text-align: justify;
-}
-
-.footer {
-	font-family: arial;
-	font-size: 30px;
-	text-align: center;
-	padding: 100px;
-	text-transform: uppercase;
-	color: white;
-	letter-spacing: 2px;
+.jacket__title {
+  top: 325px;
+  position: relative;
+  font-family: arial;
 }
